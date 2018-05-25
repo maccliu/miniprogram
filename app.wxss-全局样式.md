@@ -6,6 +6,8 @@
 
 ### 传统12栏宽度系列
 
+类名：`.w-*`
+
 ```css
 .w-1  {width: 8.333333%;}
 .w-2  {width: 16.666666%;}
@@ -23,7 +25,7 @@
 
 ### 5栏宽度系列
 
-类名 `.w-5-*`
+类名：`.w-5-*`
 
 ```css
 .w-5-1 {width: 20%;}
@@ -32,3 +34,25 @@
 .w-5-4 {width: 80%;}
 .w-5-5 {width: 100%;}
 ```
+
+## 组件
+
+### badge
+
+```css
+.badge {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 15rpx;
+  min-width: 30rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
+  border-radius: 15rpx;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+```
+
+> 1. 记得要设置 `badge` 的父元素的 `position: ...` 属性。

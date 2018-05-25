@@ -37,7 +37,7 @@
 
 ## 组件
 
-### badge
+### .badge
 
 ```css
 .badge {
@@ -56,3 +56,59 @@
 ```
 
 > 1. 记得要设置 `badge` 的父元素的 `position: ...` 属性。
+
+
+### .footer 固定页脚
+
+```scss
+$footer-height: 100rpx;   // 页脚的高度
+
+/* 页脚 */
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: $footer-height;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 页脚的占位 */
+.footer-space {
+  box-sizing: border-box;
+  width: 100%;
+  height: $footer-height;
+}
+
+/* 页脚项目 */
+.footer-item {
+  height: $footer-height;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  // 按钮模式
+  &.button {
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #009b72;
+
+    // 主按钮模式
+    &.primary {
+      color: #fff;
+      background-color: #009b72;
+    }
+  }
+}
+```
+
+> 备注：
+> 1. 因为`.footer`是固定在页面页脚的，所以主体内容部分要加上对应的占用空间`.footer-space`，不然最底下的内容会被页脚挡住了。
